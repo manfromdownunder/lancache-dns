@@ -58,7 +58,7 @@ jobs:
         run: |
           git clone https://github.com/manfromdownunder/lancache-dns.git
           cd lancache-dns
-          sed -i '1cFROM 'manfromdownunder/lancachenet-ubuntu' Dockerfile
+          sed -i '1cFROM manfromdownunder/lancachenet-ubuntu' Dockerfile
           cat Dockerfile
           docker buildx build --platform linux/arm/v7,linux/arm64 -t manfromdownunder/lancachenet-lancache-dns --push .
           cd ..
